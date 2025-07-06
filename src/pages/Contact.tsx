@@ -23,7 +23,7 @@ function Contact() {
 
                 <img
                   src={ContactImage}
-                  alt="Contact image"
+                  alt="Montreal St. Laurent stairs"
                 />
 
               </div>

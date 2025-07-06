@@ -2,7 +2,7 @@ import {HTMLProps} from "react";
 import clsx from "clsx"
 import {useField} from "formik"
 
-import {cFormGroupProps, cInputProps} from "../../utils";
+import {cFormGroupProps} from "../../utils";
 
 import FormGroup from "./FormGroup";
 
