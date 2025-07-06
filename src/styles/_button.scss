@@ -1,0 +1,110 @@
+.c-button {
+  --btn-min-height: var(--font-size-14-px44);
+  --btn-padding-x: var(--font-size-14-px40);
+  --btn-padding-y: 0.25em;
+  --btn-gap: var(--font-size-14-px8);
+  --btn-bg-color: var(--body-bg-color);
+  --btn-border-style: solid;
+  --btn-border-color: var(--body-color);
+  --btn-border-width: var(--font-size-14-px1);
+  --btn-border-radius: var(--btn-min-height);
+  --btn-color: var(--body-color);
+  --btn-font-size: var(--px14);
+  --btn-hover-bg-color: var(--black-450);
+  --btn-hover-border-color: var(--black-450);
+  --btn-hover-color: var(--body-bg-color);
+  --btn-size: var(--font-size-14-px44);
+  --btn-icon-size: 1em;
+
+
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: var(--btn-gap);
+  height: auto;
+  min-height: var(--btn-min-height);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  background-color: var(--btn-bg-color);
+  border: var(--btn-border-width) solid var(--btn-border-color);
+  border-radius: var(--btn-border-radius);
+  color: var(--btn-color);
+  font-size: var(--btn-font-size);
+  font-weight: 300;
+  box-shadow: none;
+  appearance: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--btn-hover-bg-color);
+    border-color: var(--btn-hover-border-color);
+    color: var(--btn-hover-color);
+  }
+
+
+  i {
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+  }
+
+
+  &[data-color="black"] {
+    --btn-bg-color: var(--body-color);
+    --btn-border-color: var(--body-color);
+    --btn-color: var(--body-bg-color);
+  }
+
+  &[data-color="ghost"] {
+    --btn-bg-color: transparent;
+    --btn-border-width: 0px;
+    --btn-border-color: transparent;
+    --btn-color: currentColor;
+    --btn-hover-bg-color: transparent;
+    --btn-hover-border-color: transparent;
+    --btn-hover-color: currentColor;
+  }
+
+  &[data-variant="icon"] {
+    --btn-min-height: unset;
+    --btn-padding-x: 0.25em;
+    --btn-padding-y: 0.25em;
+    --btn-size: var(--font-size-14-px44);
+    --btn-border-radius: 50%;
+
+    width: var(--btn-size);
+    height: var(--btn-size);
+  }
+
+  &[data-variant="link"] {
+    --btn-min-height: unset;
+    --btn-padding-y: unset;
+    --btn-padding-x: unset;
+    --btn-bg-color: transparent;
+    --btn-border-width: 0;
+    --btn-border-color: transparent;
+    --btn-border-radius: 0;
+    --btn-color: inherit;
+    --btn-font-size: 1em;
+    --btn-hover-bg-color: transparent;
+    --btn-hover-border-color: unset;
+    --btn-hover-color: inherit;
+    --btn-icon-size: 1em;
+
+    height: unset;
+    justify-content: unset;
+    text-transform: none;
+    letter-spacing: unset;
+    transition: opacity 0.3s ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

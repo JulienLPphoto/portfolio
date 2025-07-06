@@ -1,0 +1,12 @@
+.cNavItems {
+    &:global {
+        &.c-nav-items {
+            display: flex;
+      
+            > a {
+                display: inline-flex;
+                align-items: center;
+            }
+        }
+    }
+}

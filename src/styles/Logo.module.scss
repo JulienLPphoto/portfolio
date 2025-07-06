@@ -1,0 +1,17 @@
+.cLogo {
+    &:global {
+        &.c-logo {
+            display: inline-flex;
+            align-items: center;
+
+						>span {
+							font-size: var(--px20);
+						}
+
+						>i {
+							width: 36px;
+							height: 36px;
+						}
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.cHome {
+  &:global {
+    &.c-home {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/background.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        transition: filter 0.3s ease;
+      }
+
+      &.is-hovered::before {
+        filter: blur(3px);
+      }
+
+      >#root {
+        width: 100%;
+
+        > main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          max-width: 100%;
+        }
+
+        >.c-footer {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  :global {
+    .c-home {
+      &-section-hero {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1em;
+
+        .c-container {
+          display: flex;
+          justify-content: center;
+          
+          > a {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-end;
+            filter: blur(3px);
+            transition: filter 0.3s ease;
+            
+            &.is-hovered {
+              filter: blur(0);
+            }
+            
+            .h1 {
+              font-size: 90px;
+              font-weight: 100;
+              line-height: 1em;
+              letter-spacing: 0.15em;
+              white-space: nowrap;
+
+              @media (max-width: 576px) {
+                font-size: 50px;
+                letter-spacing: 0.1em;
+              }
+            }
+
+            .subtitle{
+              padding-right: 0.4em;
+              font-size: 40px;
+              line-height: 0.5em;
+              letter-spacing: 0.12em;
+
+              @media (max-width: 576px) {
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

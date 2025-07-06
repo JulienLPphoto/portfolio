@@ -1,0 +1,7 @@
+.cPageTitle {
+  &:global {
+    &.c-page-title {
+      margin-bottom: var(--px36);
+    }
+  }
+}

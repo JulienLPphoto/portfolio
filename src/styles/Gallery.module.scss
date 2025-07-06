@@ -1,0 +1,109 @@
+.cGallery {
+
+  // si tu veux mettre des styling propre au body/ à la page
+  &:global {
+    &.c-gallery {
+      main {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  // quand tu veux cibler les elements dans l'élement
+  :global {
+    .c-gallery {
+      &-section-grid {
+        flex: 1 1 0;
+        padding: 0 1em;
+
+        &-wrapper {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          align-items: stretch;
+          gap: var(--px24);
+
+          @media (max-width: 1199px) {
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          @media (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        &-card {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          height: auto;
+          min-height: 500px;
+          border-radius: var(--px12);
+          overflow: hidden;
+
+          @media (max-width: 991px) {
+            min-height: 400px;
+          }
+
+          @media (max-width: 576px) {
+            min-height: 300px;
+          }
+
+          &:hover,
+          &:focus,
+          &:active {
+             .c-gallery-section-grid-card-image {
+                 filter: blur(2px);
+             }
+
+            .c-gallery-section-grid-card-overlay {
+              opacity: 1;
+
+              >span {
+                transform: translateY(0);
+              }
+            }
+          }
+
+          &-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+            transition: filter 0.3s ease;
+          }
+
+          &-overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.2) 60%, black 90%);
+            color: var(--white);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+
+            >span {
+              font-size: var(--px24);
+              transform: translateY(2em);
+              transition: transform 0.4s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+fieldset {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+label,
+.c-label {
+  display: block;
+  margin-bottom: 4px;
+  color: hsl(from var(--body-color) h s l / 75%);
+  font-size: var(--px12);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+::placeholder {
+  color: var(--input-placeholder-color);
+  opacity: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+textarea {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  background-clip: padding-box;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: currentColor;
+  border-radius: 0;
+  color: var(--body-color);
+  font-family: var(--body-font-family);
+  font-size: var(--input-font-size);
+  font-weight: inherit;
+  line-height: 1.1;
+  appearance: none;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &[aria-invalid="true"] {
+    border-color: var(--error-400);
+  }
+  
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"] {
+  height: var(--input-min-height);
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+
+.c-form-group-error,
+.c-form-group-help-text {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  font-size: var(--px12);
+}
+
+.c-form-group-help-text {
+  color: hsl(from var(--body-color) h s l/ 75%);
+}
+
+.c-form-group-error {
+  color: var(--error-400);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1em;
+
+  .c-form-group {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .c-button[type="submit"] {
+    align-self: flex-end;
+    margin-top: 2em;
+  }
+}

@@ -1,0 +1,31 @@
+.cGalleryItem {
+  :global {
+    .c-gallery-item {
+      &-section-grid {
+        padding: 0 1em;
+
+        .c-masonry-grid {
+          display: flex;
+          gap: 12px;
+          /*    margin-left: -12px; */
+          width: 100%;
+
+          &-column {
+            /*  padding-left: 12px; */
+            background-clip: padding-box;
+
+            >div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: grey;
+              margin-bottom: 12px;
+              border-radius: 12px;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}

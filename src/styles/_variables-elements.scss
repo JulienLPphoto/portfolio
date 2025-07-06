@@ -1,0 +1,13 @@
+:root {
+    --header-height: 87px;
+
+    --input-font-size: 1em;
+    --input-padding-x: 0;
+    --input-padding-y: 0.5em;
+    --input-min-height: auto;
+    --input-placeholder-color: hsl(from var(--body-color) h s l /50%);
+
+    @media (max-width: 991px) {
+        --header-height: 60px;
+    }
+}

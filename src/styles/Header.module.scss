@@ -1,0 +1,43 @@
+.cHeader {
+  &:global {
+    &.c-header {
+      position: fixed;
+      z-index: 9996;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+      height: var(--header-height);
+      padding: 0 1em;
+
+      // Add these lines for the background animation
+      background-color: rgba(255, 255, 255, 0); // or your desired color with 0 opacity
+      transition: background-color 0.3s ease;
+
+      // Visible state
+      &.visible {
+        background-color: rgba(255, 255, 255, 0.9); // adjust color and opacity as needed
+      }
+
+      .c-header-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: var(--px1440);
+        margin: 0 auto;
+      }
+
+      .c-nav-items {
+        &.c-desktop {
+          gap: var(--px24);
+
+          >a {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+          }
+        }
+      }
+    }
+  }
+}
